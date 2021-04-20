@@ -57,7 +57,7 @@ endif()
 
 get_filename_component(_python_binary_path ${Python3_EXECUTABLE} DIRECTORY)
 
-find_program(SIP_EXECUTABLE sip
+find_program(SIP_EXECUTABLE sip5
     HINTS ${CMAKE_PREFIX_PATH}/bin ${CMAKE_INSTALL_PATH}/bin ${_python_binary_path} ${Python3_SITELIB}/PyQt5
 )
 
@@ -66,7 +66,7 @@ find_path(SIP_INCLUDE_DIRS sip.h
 )
 
 execute_process(
-    COMMAND ${Python3_EXECUTABLE} -c "import sip; print(sip.SIP_VERSION_STR)"
+    COMMAND ${Python3_EXECUTABLE} -c "import sip5; print(sip5.SIP_VERSION_STR)"
     RESULT_VARIABLE _process_status
     OUTPUT_VARIABLE _process_output
     OUTPUT_STRIP_TRAILING_WHITESPACE
