@@ -7,8 +7,8 @@ cmake_minimum_required(VERSION 3.6)  # Lowest version it's been tested with.
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
 # Requirements.
-find_package(PythonInterp 3.5 REQUIRED)  # Dependency of SIP.
-find_package(PythonLibs 3.5 REQUIRED)  # Dependency of SIP.
+find_package(PythonInterp 3.8 REQUIRED)  # Dependency of SIP.
+find_package(PythonLibs 3.8 REQUIRED)  # Dependency of SIP.
 find_package(SIP REQUIRED)  # To create Python bindings.
 find_package(libnest2d REQUIRED)  # The library we're creating bindings for.
 find_package(Clipper REQUIRED)  # Dependency of libnest2d.
